@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {
+      "id": "ipx",
+      "group": 1
+    },
+    {
+      "id": "linuxdoom-1.10",
+      "group": 1
+    },
+    {
+      "id": "sersrc",
+      "group": 1
+    },
+    {
+      "id": "sndserv",
+      "group": 1
+    }
+  ],
+  "links": []
+}

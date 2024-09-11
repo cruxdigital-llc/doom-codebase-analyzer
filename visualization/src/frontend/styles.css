@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#controls {
+    margin-top: 1rem;
+}
+
+#controls button {
+    margin-right: 0.5rem;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#visualization-container {
+    width: 100%;
+    height: 160vh; /* Double the height from 80vh to 160vh */
+    margin-top: 20px;
+}
+
+#visualization {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+#details-panel {
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+    border-left: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-family: 'Courier New', monospace;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font: 12px sans-serif;
+    pointer-events: none;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.collapsible-section h3 {
+    cursor: pointer;
+}
+
+.section-content {
+    margin-left: 1em;
+}
+
+.cell text {
+    pointer-events: none;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.cell rect {
+    cursor: pointer;
+}
+
+#tree-container {
+    height: 160vh; /* Adjust height to match the visualization container */
+    overflow-y: auto;
+}
+
+#tree-svg {
+    width: 100%;
+}
+
+.hover text { fill: #aaa; }
+.hover g.primary text { font-weight: bold; fill: #333; }
+.hover g.secondary text { fill: #333; }
+.hover path { stroke: #ccc; }
+.hover path.primary { stroke: #333; }
+
+#controls {
+    margin-top: 20px;
+}
+
+#details-panel {
+    margin-top: 20px;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#view-select {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+}

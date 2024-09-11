@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOM Codebase Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>DOOM Codebase Analyzer</h1>
+        <div id="controls">
+            <button id="tree-view">Tree View</button>
+            <button id="treemap-view">Treemap View</button>
+            <button id="arc-diagram-view">Arc Diagram View</button>
+        </div>
+    </header>
+    <main>
+        <div id="visualization-container">
+            <div id="visualization"></div>
+        </div>
+        <div id="details-panel"></div>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
