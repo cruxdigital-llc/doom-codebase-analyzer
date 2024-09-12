@@ -82,30 +82,7 @@ export function showNodeDetails(d) {
                 return list;
             });
         }
-        if (nodeData.content && nodeData.content.source) {
-            addCollapsibleSection(details, 'Source Code', () => {
-                const pre = document.createElement('pre');
-                pre.textContent = nodeData.content.source;
-                return pre;
-            });
-        } else if (nodeData.path) {
-            addCollapsibleSection(details, 'Source Code', () => {
-                const pre = document.createElement('pre');
-                pre.textContent = 'Loading source code...';
-                fetch(`/api/source-code?path=${encodeURIComponent(nodeData.path)}`)
-                    .then(response => response.text())
-                    .then(source => {
-                        pre.textContent = source;
-                    })
-                    .catch(error => {
-                        pre.textContent = 'Error loading source code';
-                        console.error('Error fetching source code:', error);
-                    });
-                return pre;
-            });
-        } else {
-            addCollapsibleSection(details, 'Source Code', 'Source code not available for this file.');
-        }
+        addCollapsibleSection(details, 'Source Code', 'Source code not available in static version');
     }
 }
 
