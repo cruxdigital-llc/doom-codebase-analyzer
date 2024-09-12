@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOOM Codebase Analyzer</title>
-
-  <script type="module" crossorigin src="/assets/index-DP61Y7-I.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bw0OKyVx.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-CzRgh0zo.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BEuLbcEL.css">
 </head>
 <body>
-    <h1>DOOM Codebase Analyzer</h1>
-    <input type="text" id="search" placeholder="Search for a file or function">
-    <div id="visualization"></div>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-
+    <header>
+        <h1>DOOM Codebase Analyzer</h1>
+        <div id="controls">
+            <button id="tree-view">Tree View</button>
+            <button id="treemap-view">Treemap View</button>
+            <button id="arc-diagram-view">Arc Diagram View</button>
+        </div>
+    </header>
+    <main>
+        <div id="visualization-container">
+            <div id="visualization"></div>
+        </div>
+        <div id="details-panel"></div>
+    </main>
 </body>
 </html>
