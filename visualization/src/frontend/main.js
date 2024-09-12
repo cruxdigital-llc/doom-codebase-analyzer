@@ -2,23 +2,12 @@ import { renderTree } from './treeview.js';
 import { renderTreemap } from './treemapView.js';
 import { renderArcDiagram } from './arcDiagramView.js';
 import { commonDimensions } from './utils.js';
+import codebaseData from './codebaseData.js';
 
 let currentVisualization = null;
 
-async function fetchCodebaseData() {
-    console.log('Fetching codebase data...');
-    try {
-        const response = await fetch('/api/codebase?includeSource=true');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log('Fetched data:', JSON.stringify(data, null, 2));
-        return data;
-    } catch (error) {
-        console.error('Error fetching codebase data:', error);
-        return null;
-    }
+function fetchCodebaseData() {
+    return Promise.resolve(codebaseData);
 }
 
 async function initializeVisualization() {
